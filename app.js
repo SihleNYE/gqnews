@@ -1,0 +1,8 @@
+const {createElement:h}=React; const {createRoot}=ReactDOM;
+const stories=[
+ {tag:&#39;COMMUNITY NOTICE&#39;,date:&#39;29 September 2026&#39;,title:&#39;GQNews is building a clearer home for Gqeberha updates&#39;,text:&#39;This is the first GQNews community update. Future stories will be independently written, dated and sourced before publication.&#39;,feature:true},
+ {tag:&#39;WHAT TO SUBMIT&#39;,date:&#39;Community desk&#39;,title:&#39;Events, public notices and practical local information&#39;,text:&#39;Send the who, what, where and when — plus a contact person or source. A useful local detail beats a vague press release every time.&#39;},
+ {tag:&#39;EDITORIAL PROMISE&#39;,date:&#39;GQNews standard&#39;,title:&#39;Sources, corrections and clear labels matter&#39;,text:&#39;We label notices, opinion and reporting clearly. If we make a material factual mistake, we correct it openly.&#39;}
+];
+function Card({story}){return h(&#39;article&#39;,{className:&#39;story &#39;+(story.feature?&#39;feature&#39;:&#39;&#39;)},h(&#39;p&#39;,{className:&#39;tag&#39;},story.tag),h(&#39;p&#39;,{className:&#39;date&#39;},story.date),h(&#39;h3&#39;,null,story.title),h(&#39;p&#39;,null,story.text),h(&#39;a&#39;,{href:&#39;editorial-policy.html&#39;},&#39;Our publishing standards →&#39;))}
+createRoot(document.getElementById(&#39;article-grid&#39;)).render(h(React.Fragment,null,...stories.map((s,i)=>h(Card,{key:i,story:s}))));

@@ -1,0 +1,4 @@
+# GQNews ads.txt
+# Add the exact authorised-seller line supplied by Google AdSense after approval.
+# Example only — do not publish it until it contains your own publisher ID:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
